@@ -138,16 +138,40 @@ int main()
     string roster2[3] = {Mons[team2[0]], Mons[team2[1]], Mons[team2[2]]};
     int p11[4];
     int p12[4];
+    int p13[4];
+    int p21[4];
+    int p22[4];
+    int p23[4];
     makeMoves(p11);
-    cout << "Team 1: \n";
+    makeMoves(p12);
+    makeMoves(p13);
+    makeMoves(p21);
+    makeMoves(p22);
+    makeMoves(p23);
+    cout << "Team 1:";
     for (int i = 0; i < 3; i++)
     {
-        cout << roster1[i] << "\n";
+        cout << roster1[i] << " ";
     }
-    cout << "Team 2: \n";
+    cout << "\nTeam 2: ";
     for (int i = 0; i < 3; i++)
     {
-        cout << roster2[i] << "\n";
+        cout << roster2[i] << " ";
     }
-
+    int x = 0;
+    int m = 0;
+    int m2 = 0;
+    int choice;
+    while (true)
+    {
+        x += 1;
+        cout << "\nRound " << x << "!\n";
+        cout << roster1[m];
+        cout << " V.S ";
+        cout << roster2[m2] <<"\n";
+        cout << "What does " << roster1[m] << " want to do:";
+        cout << "1 Moves 2 Pokemon";
+        cin >> choice;
+        cout << "What does " << roster2[m2] << " want to do:";
+    }
 }
