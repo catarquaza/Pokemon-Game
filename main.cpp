@@ -148,7 +148,7 @@ int main()
     makeMoves(p21);
     makeMoves(p22);
     makeMoves(p23);
-    cout << "Team 1:";
+    cout << "Team 1: ";
     for (int i = 0; i < 3; i++)
     {
         cout << roster1[i] << " ";
@@ -169,9 +169,41 @@ int main()
         cout << roster1[m];
         cout << " V.S ";
         cout << roster2[m2] <<"\n";
-        cout << "What does " << roster1[m] << " want to do:";
-        cout << "1 Moves 2 Pokemon";
+        cout << "What does " << roster1[m] << " want to do";
+        cout << " 1 Moves 2 Pokemon: ";
         cin >> choice;
+        if (choice == 1)
+        {
+            if (m == 0)
+            {
+                cout << "1 " << p11[0] <<" 2 " <<p11[1]<<" 3 "<<p11[2]<<" 4 "<<p11[3]<<"\n";
+                cin >> choice;
+                
+            }
+            if (m == 1)
+            {
+                cout << "1 " << p12[0] <<" 2 " <<p12[1]<<" 3 "<<p12[2]<<" 4 "<<p12[3]<<"\n";
+                cin >> choice;
+            }
+            if (m == 2)
+            {
+                cout << "1 " << p13[0] <<" 2 " <<p13[1]<<" 3 "<<p13[2]<<" 4 "<<p13[3]<<"\n";
+                cin >> choice;
+            }
+
+        }
+        else if (choice == 2)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                
+                cout << i+1 << ". "<< roster1[i] << " \n";
+            }
+        }
+        else 
+        {
+            cout << "Try again"
+        }
         cout << "What does " << roster2[m2] << " want to do:";
     }
 }
